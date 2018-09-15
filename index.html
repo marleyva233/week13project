@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<!-- meta tag -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title></title>
+		<title>Create A Pet</title>
 		<!-- font awesome -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 		<!-- bootstrap CDN -->
@@ -23,21 +23,17 @@
 				<input type="number" id="phoneNumber" placeholder="phone number">
 				<hr>
 				<input type="text" id="characterName" name="character-name" placeholder="Character's Name">
-				<span>Character</span>
-				<input type="radio" id="cat" name="character" value="cat">Cat
-				<input type="radio" id="dog" name="character" value="dog">Dog
-				<input type="radio" id="fox" name="character" value="fox">Fox
-				<input type="radio" id="rabbit" name="character" value="rabbit">Rabbit
-				<span>Color: </span>
-				<input type="radio" id="pink" name="color" value="pink">Pink
-				<input type="radio" id="blue" name="color" value="blue">Blue
-				<input type="radio" id="yellow" name="color" value="yellow">Yellow
-				<input type="radio" id="red" name="color" value="red">Red
-				<span>Personality:</span>
-				<input type="radio" id="lazy" name="personality" value="lazy">Lazy
-				<input type="radio" id="happy" name="personality" value="happy">Happy
-				<input type="radio" id="grouchy" name="personality" value="grouchy">Grouchy
-				<input type="radio" id="evil" name="personality" value="evil">Evil
+				<h6>Character:</h6>
+				<label>Cat<input type="radio" id="cat" name="character" value="cat"></label>
+				<label>Dog<input type="radio" id="dog" name="character" value="dog"></label>
+				<label>Fox<input type="radio" id="fox" name="character" value="fox"></label>
+				<label>Rabbit<input type="radio" id="rabbit" name="character" value="rabbit"></label>
+				
+				<h6>Personality:</h6>
+				<label>Lazy<input type="radio" id="lazy" name="personality" value="lazy"></label>
+				<label>Happy<input type="radio" id="happy" name="personality" value="happy"></label>
+				<label>Grouchy<input type="radio" id="grouchy" name="personality" value="grouchy"></label>
+				<label>Evil<input type="radio" id="evil" name="personality" value="evil"></label>
 				<hr>
 				<button id="submit" onclick="submit()">create account</button>
 			</div>
