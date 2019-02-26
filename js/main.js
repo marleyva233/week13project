@@ -26,38 +26,39 @@ function submit() {
 	//collecting data
 	var userName = document.getElementById("userName").value.trim().toUpperCase();
 	var lastName = document.getElementById("lastName").value.trim().toUpperCase();
-	var email = document.getElementById("email").value.trim( );
+	if (userName === "" || lastName === "" ) {
+		alert("Please enter a valid name and last name!");
+		return false;
+	};
+	var email = document.getElementById("email").value.trim();
 	var regEx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
-	if (regEx.test(email) === false){
+	if (regEx.test(email) === false) {
 		alert("Please enter a valid email address.");
 		return false;
 	};
 	var phoneNumber = document.getElementById("phoneNumber").value.trim().toString();
-		if(phoneNumber.length < 10){
-			alert("Please enter a valid phone number!");
-			return false;
-		};
+	if(phoneNumber.length < 10) {
+		alert("Please enter a valid phone number!");
+		return false;
+	};
 	//creating character
 	var characterName = document.getElementById("characterName").value.trim();
-	var character = document.getElementsByName("character");
-	for (var i = 0; i < character.length; i++)
-		if (character[i].checked){
-		var petForm = character[i].value;
-		break;
+	if(characterName === "") {
+		alert("Please enter your pet's name!");
+		return false;
 	}
-	var personality = document.getElementsByName("personality");
-	for (var i = 0; i < personality.length; i++)
-		if (personality[i].checked){
-		var petPersonality = personality[i].value;
-		break;
+	var character = document.querySelector("input[name=character]:checked");
+	var personality = document.querySelector("input[name=personality]:checked");
+	if (character == null || personality == null) {
+		alert("Please select your pet!");
+		return false;
 	}
-//clearing the first div by using display none
-document.getElementById("createAccount").style.display = "none";
-//creating html to display data
-var displayArea = document.getElementById("results");
-	displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><p>Name: " + userName + "</p>";
-	displayArea.innerHTML += "<p>Last Name: " + lastName + "</p>" + "<p>Email: " + email + "</p>"+ "<p>Phone Number: "+phoneNumber+ "</p>";
-	displayArea.innerHTML += "<p>Character Name: " + characterName + "</p>";
-	displayArea.innerHTML += "<p>The pet you created is a beautiful " + petPersonality + " " + petForm + "!</p>";
-	displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
-}
+	document.getElementById("createAccount").style.display = "none";
+	//creating html to display data
+	var displayArea = document.getElementById("results");
+		displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><p>Name: " + userName + "</p>";
+		displayArea.innerHTML += "<p>Last Name: " + lastName + "</p>" + "<p>Email: " + email + "</p>"+ "<p>Phone Number: "+phoneNumber+ "</p>";
+		displayArea.innerHTML += "<p>Character Name: " + characterName + "</p>";
+		displayArea.innerHTML += "<p>The pet you created is a beautiful " + personality.value + " " + character.value + "!</p>";
+		displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
+	}
