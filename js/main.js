@@ -22,43 +22,54 @@ var rabbit = {
 	grouchy:"https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/29/2015/04/iStock_000018893338_Large.jpg",
 	evil:"https://data.whicdn.com/images/61383711/large.jpg",
 };
+var errors = [];
 function submit() {
 	//collecting data
 	var userName = document.getElementById("userName").value.trim().toUpperCase();
 	var lastName = document.getElementById("lastName").value.trim().toUpperCase();
-	if (userName === "" || lastName === "" ) {
-		alert("Please enter a valid name and last name!");
-		return false;
-	};
 	var email = document.getElementById("email").value.trim();
 	var regEx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
-	if (regEx.test(email) === false) {
-		alert("Please enter a valid email address.");
-		return false;
-	};
 	var phoneNumber = document.getElementById("phoneNumber").value.trim().toString();
-	if(phoneNumber.length < 10) {
-		alert("Please enter a valid phone number!");
-		return false;
-	};
-	//creating character
 	var characterName = document.getElementById("characterName").value.trim();
-	if(characterName === "") {
-		alert("Please enter your pet's name!");
-		return false;
-	}
 	var character = document.querySelector("input[name=character]:checked");
 	var personality = document.querySelector("input[name=personality]:checked");
-	if (character == null || personality == null) {
-		alert("Please select your pet!");
-		return false;
+	// checking data
+	if (userName === "") {
+		errors.push("userName");
 	}
-	document.getElementById("createAccount").style.display = "none";
-	//creating html to display data
-	var displayArea = document.getElementById("results");
-		displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><p>Name: " + userName + "</p>";
-		displayArea.innerHTML += "<p>Last Name: " + lastName + "</p>" + "<p>Email: " + email + "</p>"+ "<p>Phone Number: "+phoneNumber+ "</p>";
-		displayArea.innerHTML += "<p>Character Name: " + characterName + "</p>";
-		displayArea.innerHTML += "<p>The pet you created is a beautiful " + personality.value + " " + character.value + "!</p>";
-		displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
+	if (lastName === "" ) {
+		errors.push("lastName");
 	}
+	if (regEx.test(email) === false) {
+		errors.push("email");
+	}
+	if(phoneNumber.length < 10) {
+		errors.push("phoneNumber");
+	}
+	if(characterName === "") {
+		errors.push("characterName");
+	}
+	if(character == null) {
+		errors.push("character");
+	}
+	if(personality == null) {
+		errors.push("personality");
+	}
+	if (errors !== "") {
+		console.log(errors);
+		for (var i = 0; i < errors.length; i++) {
+			document.getElementById(errors[i]).classList.add("bg-danger");
+		} 
+	} 
+	if (errors.length  === 0) {
+			// processing data
+			document.getElementById("createAccount").style.display = "none";
+			//creating html to display data
+			var displayArea = document.getElementById("results");
+				displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><p>Name: " + userName + "</p>";
+				displayArea.innerHTML += "<p>Last Name: " + lastName + "</p>" + "<p>Email: " + email + "</p>"+ "<p>Phone Number: "+phoneNumber+ "</p>";
+				displayArea.innerHTML += "<p>Character Name: " + characterName + "</p>";
+				displayArea.innerHTML += "<p>The pet you created is a beautiful " + personality.value + " " + character.value + "!</p>";
+				displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
+		}
+}
