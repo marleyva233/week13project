@@ -22,9 +22,11 @@ var rabbit = {
 	grouchy:"https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/29/2015/04/iStock_000018893338_Large.jpg",
 	evil:"https://data.whicdn.com/images/61383711/large.jpg",
 };
-var errors = [];
 function submit() {
+	var errors= [];
 	//collecting data
+	$("input").addClass("bg-light");
+	$("h6").addClass("bg-light");
 	var userName = document.getElementById("userName").value.trim().toUpperCase();
 	var lastName = document.getElementById("lastName").value.trim().toUpperCase();
 	var email = document.getElementById("email").value.trim();
@@ -36,7 +38,7 @@ function submit() {
 	// checking data
 	if (userName === "") {
 		errors.push("userName");
-	}
+	} 
 	if (lastName === "" ) {
 		errors.push("lastName");
 	}
@@ -58,12 +60,14 @@ function submit() {
 	if (errors !== "") {
 		console.log(errors);
 		for (var i = 0; i < errors.length; i++) {
+			document.getElementById(errors[i]).classList.remove("bg-light");
 			document.getElementById(errors[i]).classList.add("bg-danger");
 		} 
-	} 
+	}
 	if (errors.length  === 0) {
 			// processing data
-			document.getElementById("createAccount").style.display = "none";
+			document.getElementById("createAccount").classList.add("hide");
+			document.getElementById("results").classList.remove("hide");
 			//creating html to display data
 			var displayArea = document.getElementById("results");
 				displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><p>Name: " + userName + "</p>";
@@ -73,3 +77,4 @@ function submit() {
 				displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
 		}
 }
+$("input").addClass("ml-1");

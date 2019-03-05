@@ -13,10 +13,21 @@ body{
 h1{
 	text-align: center;
 }
-input[type='radio']{
-	margin-right: 0.5em;
+label{
+	padding-right: 15px;
+}
+#createAccount{
+	max-width: 600px;
+	margin: 0 auto;
 }
 /*[2]RESULTS*/
 #results{
 	padding: 5%;
+}
+#results{
+	max-width: 600px;
+	margin: 0 auto;
+}
+.hide{
+	display: none;
 }
