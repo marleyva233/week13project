@@ -16,8 +16,16 @@ h1{
 label{
 	padding-right: 15px;
 }
+input[type='text']{
+	margin-bottom: 5px;
+}
 #createAccount{
 	max-width: 600px;
+	margin: 0 auto;
+}
+button{
+	display: block;
+	width: 50%;
 	margin: 0 auto;
 }
 /*[2]RESULTS*/

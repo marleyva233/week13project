@@ -33,21 +33,19 @@ function submit() {
 	for (k = 0; k < h6.length; k++) {
 		h6[k].classList.add("bg-light");
 	}
-	var userName = document.getElementById("userName").value.trim().toUpperCase();
-	var lastName = document.getElementById("lastName").value.trim().toUpperCase();
+	var userName = document.getElementById("userName").value.replace(/[^A-Z]/gi, "");
+	var lastName = document.getElementById("lastName").value.replace(/[^A-Z]/gi, "");
 	var email = document.getElementById("email").value.trim();
 	var regEx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
 	var phoneNumber = document.getElementById("phoneNumber").value.trim().toString();
-	var characterName = document.getElementById("characterName").value.trim();
+	var characterName = document.getElementById("characterName").value.replace(/[^A-Z]/gi, "");
 	var character = document.querySelector("input[name=character]:checked");
 	var personality = document.querySelector("input[name=personality]:checked");
 	// checking data
-	userName = userName.replace(/[^a-z]/g, "");
 	if (userName.length < 1) {
 		errors.push("userName");
 	} 
-	lastName = lastName.replace(/[^a-z]/g, "");
-	if (lastName.length < 1 ) {
+	if (lastName.length < 1) {
 		errors.push("lastName");
 	}
 	if (regEx.test(email) === false) {
@@ -59,7 +57,6 @@ function submit() {
 	// if (phoneNumber.length = 10) {
 	// 	return (/([0-9]).*?\1/);
 	// }
-	characterName = characterName.replace(/[^a-z]/g, "");
 	if(characterName.length < 1) {
 		errors.push("characterName");
 	}
