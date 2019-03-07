@@ -25,8 +25,14 @@ var rabbit = {
 function submit() {
 	var errors= [];
 	//collecting data
-	$("input").addClass("bg-light");
-	$("h6").addClass("bg-light");
+	var inputs = document.getElementsByTagName("input");
+	for (j = 0; j < inputs.length; j++) {
+		inputs[j].classList.add("bg-light");
+	}
+	var h6 = document.getElementsByTagName("h6");
+	for (k = 0; k < h6.length; k++) {
+		h6[k].classList.add("bg-light");
+	}
 	var userName = document.getElementById("userName").value.trim().toUpperCase();
 	var lastName = document.getElementById("lastName").value.trim().toUpperCase();
 	var email = document.getElementById("email").value.trim();
@@ -36,10 +42,12 @@ function submit() {
 	var character = document.querySelector("input[name=character]:checked");
 	var personality = document.querySelector("input[name=personality]:checked");
 	// checking data
-	if (userName === "") {
+	userName = userName.replace(/[^a-z]/g, "");
+	if (userName.length < 1) {
 		errors.push("userName");
 	} 
-	if (lastName === "" ) {
+	lastName = lastName.replace(/[^a-z]/g, "");
+	if (lastName.length < 1 ) {
 		errors.push("lastName");
 	}
 	if (regEx.test(email) === false) {
@@ -48,7 +56,11 @@ function submit() {
 	if(phoneNumber.length < 10) {
 		errors.push("phoneNumber");
 	}
-	if(characterName === "") {
+	// if (phoneNumber.length = 10) {
+	// 	return (/([0-9]).*?\1/);
+	// }
+	characterName = characterName.replace(/[^a-z]/g, "");
+	if(characterName.length < 1) {
 		errors.push("characterName");
 	}
 	if(character == null) {
@@ -77,4 +89,3 @@ function submit() {
 				displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
 		}
 }
-$("input").addClass("ml-1");
