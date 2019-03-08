@@ -27,11 +27,11 @@ function submit() {
 	//collecting data
 	var inputs = document.getElementsByTagName("input");
 	for (j = 0; j < inputs.length; j++) {
-		inputs[j].classList.add("bg-light");
+		inputs[j].classList.add("correct");
 	}
-	var h6 = document.getElementsByTagName("h6");
-	for (k = 0; k < h6.length; k++) {
-		h6[k].classList.add("bg-light");
+	var span = document.getElementsByTagName("span");
+	for (k = 0; k < span.length; k++) {
+		span[k].classList.add("correct");
 	}
 	var userName = document.getElementById("userName").value.replace(/[^A-Z]/gi, "");
 	var lastName = document.getElementById("lastName").value.replace(/[^A-Z]/gi, "");
@@ -69,8 +69,8 @@ function submit() {
 	if (errors !== "") {
 		console.log(errors);
 		for (var i = 0; i < errors.length; i++) {
-			document.getElementById(errors[i]).classList.remove("bg-light");
-			document.getElementById(errors[i]).classList.add("bg-danger");
+			document.getElementById(errors[i]).classList.remove("correct");
+			document.getElementById(errors[i]).classList.add("wrong");
 		} 
 	}
 	if (errors.length  === 0) {

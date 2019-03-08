@@ -28,14 +28,24 @@ button{
 	width: 50%;
 	margin: 0 auto;
 }
-/*[2]RESULTS*/
-#results{
-	padding: 5%;
+#signIn{
+	background-color: #f1f1f1;
+	text-align: center;
+	padding: 1%;
+	margin-top: 1%;
 }
+/*[2]RESULTS*/
 #results{
 	max-width: 600px;
 	margin: 0 auto;
+	padding: 5%;
 }
 .hide{
 	display: none;
+}
+.wrong{
+	border: dashed 1px red;
+}
+.correct{
+	border: none;
 }

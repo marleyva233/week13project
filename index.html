@@ -18,21 +18,26 @@
 			<h3 class="text-center">Create Your Account</h3>
 			<div class="bg-light px-4 py-4">
 				<p>Tells us about yourself:</p>
-				<input type="text" id="userName" name="name" placeholder="Name">
-				<input type="text" id="lastName" name="lastName" placeholder="Last Name">
-				<input type="email" id="email" name="email" placeholder="email@address.com">
-				<input type="tel" id="phoneNumber" placeholder="(000) 000-0000">
+				<p>Name:<br>
+				<input type="text" id="userName" name="name" placeholder="John">
+				<input type="text" id="lastName" name="lastName" placeholder="Doe">
+			    </p>
+			    <p>
+			    	Email Address:<br>
+				<input type="email" id="email" name="email" placeholder="email@address.com"></p>
+				<p>Phone Number:<br>
+				<input type="tel" id="phoneNumber" placeholder="(000) 000-0000"></p>
 				<hr>
 			</div>
 			<div class="bg-light px-4 pb-4">
-				<p>Create your pet:</p>
-				<input type="text" id="characterName" name="character-name" placeholder="Character's Name">
-				<h6 id="character">Character:</h6>
+				<p>Create your pet:<br>
+				<input type="text" id="characterName" name="character-name" placeholder="Pet's Name"></p>
+				<span id="character">Type:</span><br>
 				<label>Cat<input type="radio" id="cat" name="character" value="cat" class="ml-1"></label>
 				<label>Dog<input type="radio" id="dog" name="character" value="dog" class="ml-1"></label>
 				<label>Fox<input type="radio" id="fox" name="character" value="fox" class="ml-1"></label>
-				<label>Rabbit<input type="radio" id="rabbit" name="character" value="rabbit" class="ml-1"></label>
-				<h6 id="personality">Personality:</h6>
+				<label>Rabbit<input type="radio" id="rabbit" name="character" value="rabbit" class="ml-1"></label><br>
+				<span id="personality">Personality:</span><br>
 				<label>Lazy<input type="radio" id="lazy" name="personality" value="lazy" class="ml-1"></label>
 				<label>Happy<input type="radio" id="happy" name="personality" value="happy" class="ml-1"></label>
 				<label>Grouchy<input type="radio" id="grouchy" name="personality" value="grouchy" class="ml-1"></label>
@@ -40,6 +45,7 @@
 				<hr>
 				<p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
 				<button id="submit" onclick="submit()">Register</button>
+				<p id="signIn"> Already have an account? <a href="#">Sign In</a></p>
 			</div>
 		</div>
 		<div id="results" class="bg-light py-3 mt-3 hide">
