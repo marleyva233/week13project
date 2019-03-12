@@ -29,13 +29,13 @@ input:focus{
 input:hover{
 	background-color: #f1f1f1;
 }
-button{
+#createAccount button{
 	border:none;
 	display: block;
 	width: 50%;
 	margin: 0 auto;
 }
-button:hover{
+#createAccount button:hover{
 	border:none;
 	background-color: #f1f1f1;
 }
@@ -59,4 +59,8 @@ button:hover{
 }
 .correct{
 	border: 1px black solid;
+}
+.petImg{
+	width: 50%;
+	max-width: 200px;
 }
