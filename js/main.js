@@ -55,17 +55,17 @@ function submit() {
 	}
 	// testing image sources
 	var petSrc;
-	if (character.value == "cat") {
+	switch (character.value) {
+		case "cat":
 		petSrc = pets[0][personality.value];
-
-	}
-	if (character.value == "dog") {
+		break;
+		case "dog":
 		petSrc = pets[1][personality.value];
-	}
-	if (character.value == "fox") {
+		break;
+		case "fox":
 		petSrc = pets[2][personality.value];
-	}
-	if (character.value == "rabbit") {
+		break;
+		case "rabbit":
 		petSrc = pets[3][personality.value];
 	}
 	// end image sources testing
