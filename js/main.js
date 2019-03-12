@@ -66,23 +66,21 @@ function submit() {
 	if(personality == null) {
 		errors.push("personality");
 	}
-	if (errors !== "") {
-		console.log(errors);
+	if (errors.length  === 0) {
+		// processing data
+		document.getElementById("createAccount").classList.add("hide");
+		document.getElementById("results").classList.remove("hide");
+		//creating html to display data
+		var displayArea = document.getElementById("results");
+			displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><p>Name: " + userName + "</p>";
+			displayArea.innerHTML += "<p>Last Name: " + lastName + "</p>" + "<p>Email: " + email + "</p>"+ "<p>Phone Number: "+phoneNumber+ "</p>";
+			displayArea.innerHTML += "<p>Character Name: " + characterName + "</p>";
+			displayArea.innerHTML += "<p>The pet you created is a beautiful " + personality.value + " " + character.value + "!</p>";
+			displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
+	} else {
 		for (var i = 0; i < errors.length; i++) {
 			document.getElementById(errors[i]).classList.remove("correct");
 			document.getElementById(errors[i]).classList.add("wrong");
 		} 
 	}
-	if (errors.length  === 0) {
-			// processing data
-			document.getElementById("createAccount").classList.add("hide");
-			document.getElementById("results").classList.remove("hide");
-			//creating html to display data
-			var displayArea = document.getElementById("results");
-				displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><p>Name: " + userName + "</p>";
-				displayArea.innerHTML += "<p>Last Name: " + lastName + "</p>" + "<p>Email: " + email + "</p>"+ "<p>Phone Number: "+phoneNumber+ "</p>";
-				displayArea.innerHTML += "<p>Character Name: " + characterName + "</p>";
-				displayArea.innerHTML += "<p>The pet you created is a beautiful " + personality.value + " " + character.value + "!</p>";
-				displayArea.innerHTML += "<img src='" + + "' id='petImg'>";
-		}
 }
