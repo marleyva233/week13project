@@ -27,7 +27,7 @@ function submit() {
 	var lastName = document.getElementById("lastName").value.replace(/[^A-Z]/gi, "");
 	var email = document.getElementById("email").value.trim();
 	var regEx = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$/;
-	var phoneNumber = document.getElementById("phoneNumber").value.trim().toString();
+	var phoneNumber = document.getElementById("phoneNumber").value.replace(/[^0-9]/g, "").toString();
 	var characterName = document.getElementById("characterName").value.replace(/[^A-Z]/gi, "");
 	var character = document.querySelector("input[name=character]:checked");
 	var personality = document.querySelector("input[name=personality]:checked");
@@ -79,7 +79,7 @@ function submit() {
 			petSrc = pets[3][personality.value];
 		}
 		// ending tests
-			displayArea.innerHTML += "<img src='"+ petSrc +"' alt='"+ character.value +"' class='petImg'>";
+			displayArea.innerHTML += "<div class='petImg'><img src='" + petSrc + "' alt='" + personality.value + " " + character.value + "' class='petImg'></div>";
 	} else {
 		for (var i = 0; i < errors.length; i++) {
 			document.getElementById(errors[i]).classList.remove("correct");
