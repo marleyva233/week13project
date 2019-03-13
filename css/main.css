@@ -21,6 +21,10 @@ a{
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 }
+h3,
+h4{
+	text-align: center;
+}
 /*[1]CREATEACCOUNT*/
 #puppy{
 	width:150px;
@@ -89,18 +93,32 @@ input:hover{
 	max-width: 500px;
 }
 /*[3]MEDIA QUERIES*/
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 635px) {
+	#createAccount,
+	#results{
+		width: 90%;
+	}
+}
+@media only screen and (max-width: 560px) {
 	h3{
-		font-size: 18px;
+	font-size: 18px;
 	}
 	h4{
 		font-size: 16px;
 	}
 	label,
 	p,
+	input::placeholder,
 	#character,
 	#personality{
 		font-size: 14px;
+	}
+}
+@media only screen and (max-width: 500px) {
+	h3, 
+	h4{
+		text-align: right;
+		padding-right: 5%;
 	}
 	#puppy{
 		left: -25px;
@@ -108,15 +126,16 @@ input:hover{
 }
 @media only screen and (max-width: 460px) {
 	h3{
-		font-size: 14px;
+		font-size: 16px;
 	}
 	h4{
-		font-size: 12px;
+		font-size: 14px;
 	}
 	label,
 	p,
 	#character,
-	#personality{
+	#personality,
+	input::placeholder{
 	font-size:  12px;
 	font-family: 'Roboto', sans-serif;
 	}
