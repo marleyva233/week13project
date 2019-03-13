@@ -53,22 +53,6 @@ function submit() {
 	if(personality == null) {
 		errors.push("personality");
 	}
-	// testing image sources
-	var petSrc;
-	switch (character.value) {
-		case "cat":
-		petSrc = pets[0][personality.value];
-		break;
-		case "dog":
-		petSrc = pets[1][personality.value];
-		break;
-		case "fox":
-		petSrc = pets[2][personality.value];
-		break;
-		case "rabbit":
-		petSrc = pets[3][personality.value];
-	}
-	// end image sources testing
 	if (errors.length  === 0) {
  		// processing data
 		document.getElementById("createAccount").classList.add("hide");
@@ -79,6 +63,22 @@ function submit() {
 			displayArea.innerHTML += "<p>Last Name: " + lastName + "</p>" + "<p>Email: " + email + "</p>"+ "<p>Phone Number: "+phoneNumber+ "</p>";
 			displayArea.innerHTML += "<p>Character Name: " + characterName + "</p>";
 			displayArea.innerHTML += "<p>The pet you created is a beautiful " + personality.value + " " + character.value + "!</p>";
+		// testing image sources
+		var petSrc;
+		switch (character.value) {
+			case "cat":
+			petSrc = pets[0][personality.value];
+			break;
+			case "dog":
+			petSrc = pets[1][personality.value];
+			break;
+			case "fox":
+			petSrc = pets[2][personality.value];
+			break;
+			case "rabbit":
+			petSrc = pets[3][personality.value];
+		}
+		// ending tests
 			displayArea.innerHTML += "<img src='"+ petSrc +"' alt='"+ character.value +"' class='petImg'>";
 	} else {
 		for (var i = 0; i < errors.length; i++) {
