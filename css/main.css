@@ -2,8 +2,8 @@
 [0]GENERAL
 [1]CREATEACCOUNT
 [2]RESULTS
+[3]MEDIA QUERIES
 */
-
 
 /*[0]GENERAL*/
 body{
@@ -11,8 +11,8 @@ body{
 	font-size: 14px;
 }
 p,
-#type,
-#character{
+#character,
+#personality{
 	font-size: 16px;
 	font-family: 'Srisakdi', cursive;
 	font-weight: bold;
@@ -25,8 +25,9 @@ a{
 #puppy{
 	width:150px;
 	position: relative;
-	top:-145px;
+	top:-150px;
 	left:-40px;
+	margin-bottom: -135px;
 }
 label{
 	padding-right: 15px;
@@ -69,6 +70,11 @@ input:hover{
 	margin: 0 auto;
 	padding: 5%;
 }
+#results p{
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+}
 .hide{
 	display: none;
 }
@@ -80,4 +86,37 @@ input:hover{
 }
 .petImg{
 	text-align: center;
+	max-width: 500px;
 }
+/*[3]MEDIA QUERIES*/
+@media only screen and (max-width: 500px) {
+	h3{
+		font-size: 18px;
+	}
+	h4{
+		font-size: 16px;
+	}
+	label,
+	p,
+	#character,
+	#personality{
+		font-size: 14px;
+	}
+	#puppy{
+		left: -25px;
+	}
+}
+@media only screen and (max-width: 460px) {
+	h3{
+		font-size: 14px;
+	}
+	h4{
+		font-size: 12px;
+	}
+	label,
+	p,
+	#character,
+	#personality{
+	font-size:  12px;
+	font-family: 'Roboto', sans-serif;
+	}
