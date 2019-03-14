@@ -79,7 +79,7 @@ function submit() {
 			petSrc = pets[3][personality.value];
 		}
 		// ending tests
-			displayArea.innerHTML += "<div class='petImg'><img src='" + petSrc + "' alt='" + personality.value + " " + character.value + "' class='petImg'></div>";
+			displayArea.innerHTML += "<div class='petImg'><img src='" + petSrc + "' alt='" + personality.value + " " + character.value + "' id='petImg'></div>";
 	} else {
 		for (var i = 0; i < errors.length; i++) {
 			document.getElementById(errors[i]).classList.remove("correct");
