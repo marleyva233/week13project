@@ -13,7 +13,7 @@ new pet(dog, "img/lazydog.jpg", "img/happydog.jpg", "img/grouchydog.jpg", "img/e
 new pet(fox, "img/lazyfox.jpg", "img/happyfox.jpg", "img/grouchyfox.jpg", "img/evilfox.jpg", 2);
 new pet(rabbit, "img/lazyrabbit.jpg", "img/happyrabbit.jpg", "img/grouchyrabbit.jpg", "img/evilrabbit.jpg", 3);
 function submit() {
-	var errors= [];
+	var errors = [];
 	//collecting data
 	var inputs = document.getElementsByTagName("input");
 	for (j = 0; j < inputs.length; j++) {
@@ -60,7 +60,7 @@ function submit() {
 		//creating html to display data
 		var displayArea = document.getElementById("results");
 			displayArea.innerHTML = "<h1>Welcome to aniWorld &trade;!</h1><h6>Name: " + userName + "</h6>";
-			displayArea.innerHTML += "<h6>Last Name: " + lastName + "</h6>" + "<h6>Email: " + email + "</h6>"+ "<h6>Phone Number: "+phoneNumber+ "</h6>";
+			displayArea.innerHTML += "<h6>Last Name: " + lastName + "</h6>" + "<h6>Email: " + email + "</h6>"+ "<h6>Phone Number: "+ phoneNumber + "</h6>";
 			displayArea.innerHTML += "<h6>Character Name: " + characterName + "</h6>";
 			displayArea.innerHTML += "<h6>The pet you created is a beautiful " + personality.value + " " + character.value + "!</h6>";
 		// testing image sources

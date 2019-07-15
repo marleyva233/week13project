@@ -6,154 +6,160 @@
 */
 
 /*[0]GENERAL*/
-body{
+body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 }
 p,
 #character,
-#personality{
+#personality {
 	font-size: 16px;
 	font-family: 'Srisakdi', cursive;
 	font-weight: bold;
 }
-a{
+a {
 	font-family: 'Roboto', sans-serif;
 	font-size: 12px;
 }
 h3,
-h4{
+h4 {
 	text-align: center;
 }
 /*[1]CREATEACCOUNT*/
-#puppy{
+#puppy {
 	width:150px;
 	position: relative;
 	top:-150px;
 	left:-40px;
 	margin-bottom: -135px;
 }
-label{
+label {
 	padding-right: 15px;
 }
 input[type='text'],
 input[type='tel'],
-input[type='email']{
+input[type='email'] {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 }
-#createAccount{
+#createAccount {
 	max-width: 600px;
 	margin: 0 auto;
 }
-input:focus{
+input:focus {
 	background-color: #f1f1f1;
 }
-input:hover{
+input:hover {
 	background-color: #f1f1f1;
 }
-#createAccount button{
+#createAccount button {
 	border:none;
 	display: block;
 	width: 50%;
 	margin: 0 auto;
 }
-#createAccount button:hover{
+#createAccount button:hover {
 	border:none;
 	background-color: #f1f1f1;
 }
-#signIn{
+#signIn {
 	background-color: #f1f1f1;
 	text-align: center;
 	padding: 1%;
 	margin-top: 1%;
 }
 /*[2]RESULTS*/
-#results{
+#results {
 	max-width: 600px;
 	margin: 0 auto;
 	padding: 5%;
 }
-#petImg{
+#petImg {
 	max-width: 500px;
 }
-#results p{
+#results p {
 	font-family: 'Roboto', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 }
-.hide{
+.hide {
 	display: none;
 }
-.wrong{
+.wrong {
 	border: dashed 1px red;
 }
-.correct{
+.correct {
 	border: initial;
 }
-.petImg{
+.petImg {
 	text-align: center;
+}
+#disclaimer {
+	font-size: 10px;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	font-weight: normal;
 }
 /*[3]MEDIA QUERIES*/
 @media only screen and (max-width: 635px) {
 	#createAccount,
-	#results{
+	#results {
 		width: 90%;
 	}
-	#petImg{
+	#petImg {
 		max-width: 400px;
 	}
 }
 @media only screen and (max-width: 560px) {
-	h3{
+	h3 {
 	font-size: 18px;
 	}
-	h4{
+	h4 {
 		font-size: 16px;
 	}
 	label,
 	p,
 	input::placeholder,
 	#character,
-	#personality{
+	#personality {
 		font-size: 14px;
 	}
-	#petImg{
+	#petImg {
 		max-width: 300px;
 	}
 }
 @media only screen and (max-width: 500px) {
 	h3, 
-	h4{
+	h4 {
 		text-align: right;
 		padding-right: 5%;
 	}
-	#puppy{
+	#puppy {
 		left: -25px;
 	}
 		max-width: 400px;
 	}
-	#petImg{
+	#petImg {
 		max-width: 300px;
 	}
 }
 @media only screen and (max-width: 460px) {
-	h3{
+	h3 {
 		font-size: 16px;
 	}
 	h4, 
-	h6{
+	h6 {
 		font-size: 14px;
 	}
 	label,
 	p,
 	#character,
 	#personality,
-	input::placeholder{
+	input::placeholder {
 	font-size:  12px;
 	font-family: 'Roboto', sans-serif;
 	}
-	#petImg{
+	#petImg {
 		max-width: 300px;
 	}
 }
