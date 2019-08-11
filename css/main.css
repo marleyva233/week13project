@@ -6,20 +6,19 @@
 */
 
 /*[0]GENERAL*/
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 14px;
-}
+body,
 p,
 #character,
 #personality {
-	font-size: 16px;
-	font-family: 'Srisakdi', cursive;
-	font-weight: bold;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
 }
 a {
-	font-family: 'Roboto', sans-serif;
-	font-size: 12px;
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+}
+a:hover {
+	text-decoration: none;
 }
 h3,
 h4 {
@@ -39,8 +38,13 @@ label {
 input[type='text'],
 input[type='tel'],
 input[type='email'] {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 14px;
+	border-radius: 5px;
+}
+#password{
+	display: block;
+	border-radius: 5px;
 }
 #createAccount {
 	max-width: 600px;
@@ -78,7 +82,7 @@ input:hover {
 	max-width: 500px;
 }
 #results p {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
 	font-size: 14px;
 	font-weight: normal;
 }
@@ -96,7 +100,7 @@ input:hover {
 }
 #disclaimer {
 	font-size: 10px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
 	text-align: center;
 	font-weight: normal;
 }
@@ -157,7 +161,7 @@ input:hover {
 	#personality,
 	input::placeholder {
 	font-size:  12px;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Lato', sans-serif;
 	}
 	#petImg {
 		max-width: 300px;

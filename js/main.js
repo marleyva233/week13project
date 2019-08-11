@@ -12,6 +12,7 @@ new pet(cat, "img/lazycat.jpg", "img/happycat.jpg", "img/grouchycat.jpg", "img/e
 new pet(dog, "img/lazydog.jpg", "img/happydog.jpg", "img/grouchydog.jpg", "img/evildog.png", 1);
 new pet(fox, "img/lazyfox.jpg", "img/happyfox.jpg", "img/grouchyfox.jpg", "img/evilfox.jpg", 2);
 new pet(rabbit, "img/lazyrabbit.jpg", "img/happyrabbit.jpg", "img/grouchyrabbit.jpg", "img/evilrabbit.jpg", 3);
+var password = document.getElementById("password");
 function submit() {
 	var errors = [];
 	//collecting data
@@ -23,6 +24,7 @@ function submit() {
 	for (k = 0; k < span.length; k++) {
 		span[k].classList.add("correct");
 	}
+	document.getElementById("password").classList.add("correct");
 	var userName = document.getElementById("userName").value.replace(/[^A-Z]/gi, "");
 	var lastName = document.getElementById("lastName").value.replace(/[^A-Z]/gi, "");
 	var email = document.getElementById("email").value.trim();
@@ -40,6 +42,9 @@ function submit() {
 	}
 	if (regEx.test(email) === false) {
 		errors.push("email");
+	}
+	if (email === "") {
+		errors.push("password");
 	}
 	if(phoneNumber.length < 10) {
 		errors.push("phoneNumber");
@@ -86,4 +91,7 @@ function submit() {
 			document.getElementById(errors[i]).classList.add("wrong");
 		} 
 	}
+}
+function showPassword() {
+	password.type = (password.type === "password") ? "text" : "password";
 }

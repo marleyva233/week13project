@@ -10,7 +10,7 @@
 		<!-- bootstrap CDN -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 		<!-- custom fonts -->
-		<link href="https://fonts.googleapis.com/css?family=Roboto|Srisakdi" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Lato" rel="stylesheet">
 		<!-- my custom css -->
 		<link rel="stylesheet" href="css/main.css">
 	</head>
@@ -49,14 +49,20 @@
 				<img src="img/puppy.png" id="puppy">
 				<p>Tells us about yourself:</p>
 				<p>Name:<br>
-				<input type="text" id="userName" name="name" placeholder="John">
-				<input type="text" id="lastName" name="lastName" placeholder="Doe">
+					<input type="text" id="userName" name="name" placeholder="John">
+					<input type="text" id="lastName" name="lastName" placeholder="Doe">
 			    </p>
 			    <p>
 			    	Email Address:<br>
-				<input type="email" id="email" name="email" placeholder="email@address.com"></p>
+					<input type="email" id="email" name="email" placeholder="email@address.com"></p>
+				<p>
+					Password:<br>
+					<input type="password" name="password" placeholder="password" id="password">
+					<input type= "checkbox" onclick="showPassword();"> Show Password<br>
+				</p>
 				<p>Phone Number:<br>
-				<input type="tel" id="phoneNumber" placeholder="(000) 000-0000"></p>
+					<input type="tel" id="phoneNumber" placeholder="(000) 000-0000">
+				</p>
 				<hr>
 			</div>
 			<div class="bg-light px-4 pb-4">
